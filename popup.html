@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Attachments</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="row">
+      <label>File extensions (comma-separated):</label>
+      <input id="ext-input" type="text" value="pdf, doc, docx, xls, xlsx, txt, mp4, mp3">
+    </div>
+
+    <div class="row">
+      <button id="scan-btn">Scan page</button>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="results" class="hidden">
+      <div class="row">
+        <label>
+          <input type="checkbox" id="select-all">
+          Select / deselect all
+        </label>
+      </div>
+      <div id="files-list"></div>
+      <div class="row">
+        <button id="download-selected">Download selected</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
