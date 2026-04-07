@@ -141,11 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
       urls.add(abs);
     };
 
-    document.querySelectorAll('a[href], link[href], area[href], source[src], img[src], iframe[src], script[src]')
-      .forEach(el => {
-        const href = el.getAttribute('href') || el.getAttribute('src');
-        addUrl(href);
-      });
+document.querySelectorAll('a[href], link[href], area[href], source[src], audio[src], video[src], img[src], iframe[src], script[src]')
+.forEach(el => {
+  const href = el.getAttribute('href') || el.getAttribute('src');
+  addUrl(href);
+});
 
     document.querySelectorAll('[data-url],[data-href],[data-src]').forEach(el => {
       ['data-url', 'data-href', 'data-src'].forEach(attr => {
